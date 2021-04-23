@@ -1,0 +1,13 @@
+{% extends "account/base.html" %}
+
+
+{% block content %}
+    <div>
+        <form method="post" >
+            {% csrf_token %}
+            <p>Are You Sure?</p>
+            <a href="{% url 'profile' %}" >Cancel</a>
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+{% endblock %}

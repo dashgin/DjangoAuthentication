@@ -1,0 +1,13 @@
+{% extends 'account/base.html' %}
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+
+    <div>
+        <h2>{{ request.user.full_name }}</h2>
+        <a href="{% url 'profile-settings' %}">
+            Settings
+        </a>
+    </div>
+
+{% endblock %}

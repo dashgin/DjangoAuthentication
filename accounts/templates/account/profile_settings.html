@@ -1,0 +1,18 @@
+{% extends 'account/base.html' %}
+
+{% block title %}Profile|Settings{% endblock %}
+{% block content %}
+
+    <div>
+
+        <h2>{{ request.user.full_name }} - Settings</h2>
+        <div>
+            <p>Email: {{ request.user.email }}</p>
+            <p>Join Date: {{ request.user.date_joined|date:" d F Y" }}</p>
+            <p><a href="{% url 'account_email' %}">Change E-mail</a></p>
+            <p><a href="{% url 'account_change_password' %}">Change Password</a></p>
+            <p><a href="{% url 'account-delete' request.user.id %}">Delete Account</a></p>
+        </div>
+    </div>
+
+{% endblock %}
