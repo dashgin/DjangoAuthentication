@@ -1,1 +1,1 @@
-# Django - authentication apps for mvt and api
+# Ready authentication apps for Django and DRF
